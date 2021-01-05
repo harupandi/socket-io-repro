@@ -8,8 +8,8 @@ if(process.env.APPENV == "prod"){
   socket = io('ws://brpineda-win-node-socket.azurewebsites.net');
   socket2 = io('ws://brpineda-win-node-socket.azurewebsites.net/test-namespace');
 }else{
-  socket = io('wss://tl.doctorhoy.com/myapp/peerjs', () => console.log('Connectoin established to doctorhoy'));
-  //socket2 = io('ws://localhost:5000/test-namespace');
+  socket = io('ws://localhost:5000/');
+  socket2 = io('ws://localhost:5000/test-namespace');
 }
 
 //Default namespace
@@ -23,14 +23,14 @@ socket.on('connect', () => {
 });
 
 //Second namespace
-/*socket2.on('connect', () => {
+socket2.on('connect', () => {
   socket2.emit('identifier',
   {
     instanceId: process.env.WEBSITE_INSTANCE_ID,
     socketId: socket.id,
     namespace: 'test-namespace'
   });
-});*/
+});
 
 app.get('/', (req, res) => {
   socket.emit('hello', {
