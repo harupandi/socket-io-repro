@@ -1,0 +1,16 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "Web component of repro for Coca Cola",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan Pineda",
+  "license": "ISC",
+  "dependencies": {
+    "applicationinsights": "^1.8.7",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
