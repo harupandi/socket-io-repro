@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/681d7037-3e36-4e51-b397-7b67b54536a6/resourceGroups/brpineda-appsvc-win-rg/providers/Microsoft.Web/sites/brpineda-win-node-web",
-    "appService.deploySubpath": "."
-}
