@@ -5,8 +5,8 @@ const io = require('socket.io-client');
 
 //connect to namespaces
 if(process.env.APPENV == "prod"){
-  socket = io('ws://brpineda-win-node-socket.azurewebsites.net');
-  socket2 = io('ws://brpineda-win-node-socket.azurewebsites.net/test-namespace');
+  socket = io('ws://<app service name>.azurewebsites.net');
+  socket2 = io('ws://<app service name>.azurewebsites.net/test-namespace');
 }else{
   socket = io('ws://localhost:5000/');
   socket2 = io('ws://localhost:5000/test-namespace');
